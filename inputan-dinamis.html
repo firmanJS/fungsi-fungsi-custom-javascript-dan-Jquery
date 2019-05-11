@@ -20,10 +20,10 @@
     
     <script type="text/javascript">
         var html = '';
-        $('.inputan').keyup(function () {
-            $('.classinput').empty();
-            let nof = $('.inputan').val();
-            for (let x = 0; x < nof; x++) {
+        $('.inputan').keyup(function () { // ketika kita mengetik di inputan
+            $('.classinput').empty(); //mengosongkan append
+            let nof = $('.inputan').val(); //inisiasi jumlah inputan dari class inputan bisa pake class atau id
+            for (let x = 0; x < nof; x++) { //looping untuk append jumlah dinamis inputan
                 html = 'Nama : <input class="form-control" type="text" name="nama' + x + '" />';
                 html = html + 'Email : <input class="form-control" type="text" name="email' + x + '" />';
                 html = html + '<br />';
