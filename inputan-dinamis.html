@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dinamis Inputan</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+<body>
+  <br>
+    <div class="container col-md-4">
+      <label for=""> masukan jumlah inputan</label>
+      <input type="text" class="inputan form-control col-md-4" />
+    </div>
+    <div class="classinput container col-md-12">
+    
+    </div>
+    
+    <script type="text/javascript">
+        var html = '';
+        $('.inputan').keyup(function () {
+            $('.classinput').empty();
+            let nof = $('.inputan').val();
+            for (let x = 0; x < nof; x++) {
+                html = 'Nama : <input class="form-control" type="text" name="nama' + x + '" />';
+                html = html + 'Email : <input class="form-control" type="text" name="email' + x + '" />';
+                html = html + '<br />';
+                $('.classinput').append(html);
+            }
+        }); 
+    </script>
+</body>
+</html>
